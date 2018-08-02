@@ -33,9 +33,14 @@ namespace TopDeckDemo
             test.Add(c8);
             test.Add(c9);
             test.Add(c10);
+
+
             test.PrintStack();
-
-
+            for (int i = 0; i < 100; i++)
+            {
+                test.ShuffleTopBottom(i);
+                test.PrintStack();
+            }
             sb.AppendLine("Compile OK. Press any key...");
             Console.Write(sb);
             Console.ReadLine();

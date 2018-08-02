@@ -44,7 +44,7 @@ namespace TopDeckDemo
             {
                 CardHolder pile1 = new CardHolder();            // are these CardHolders in the right spot in the loop?
                 CardHolder pile2 = new CardHolder();
-                for (int j = 0; j <= cards.Count(); j++)        // for every card in 'cards', put it into 2 piles, alternating.
+                for (int j = 0; j < cards.Count; j++)        // for every card in 'cards', put it into 2 piles, alternating.
                 {
                     if (j % 2 == 0)
                     {
@@ -56,11 +56,13 @@ namespace TopDeckDemo
                     }
                 }
                 cards.Clear();                                  // confirm there are no duplicate entries in 'cards'.
-                for(int k = 0; k < pile1.Size; k++)             // for every card in each pile, add them back to 'cards.'
+                int p1 = pile1.Size;
+                int p2 = pile2.Size;
+                for(int k = 0; k < p1; k++)             // for every card in each pile, add them back to 'cards.'
                 {
                     cards.Add(pile1.Draw());
                 }
-                for (int k = 0; k < pile2.Size; k++)
+                for (int k = 0; k < p2; k++)
                 {
                     cards.Add(pile2.Draw());
                 }
