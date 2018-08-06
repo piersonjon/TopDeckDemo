@@ -10,7 +10,9 @@ namespace TopDeckDemo
     {
         static void Main(string[] args)
         {
+            Random rnd = new Random();
             StringBuilder sb = new StringBuilder();
+            Command c = new Command();
 
             CardHolder test = new CardHolder();
             Card c1 = new Card("Card 1");
@@ -34,13 +36,10 @@ namespace TopDeckDemo
             test.Add(c9);
             test.Add(c10);
 
-
             test.PrintStack();
-            for (int i = 0; i < 100; i++)
-            {
-                test.ShuffleTopBottom(i);
-                test.PrintStack();
-            }
+            test.Shuffle();
+            test.PrintStack();
+            
             sb.AppendLine("Compile OK. Press any key...");
             Console.Write(sb);
             Console.ReadLine();

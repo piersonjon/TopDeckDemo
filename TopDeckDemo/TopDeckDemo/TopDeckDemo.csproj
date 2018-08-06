@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="CardHolder.cs" />
+    <Compile Include="Command.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
